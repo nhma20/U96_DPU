@@ -14,12 +14,22 @@ Requires:
   
   ``git clone -b 2021.1 https://github.com/Avnet/vitis``
   
-2. In ``vitis/`` directory do:
+1. In ``vitis/`` directory do:
 
   ``make u96v2_sbc step=xsa`` (may have to add new line 95 in ``hdl/scripts/make.tcl`` ``return 10`` to avoid using too many ressources and crashing machine)
   
+  This creates new directory ``hdl/projects/u96v2_sbc_base_2021_1`` with Vivado project which can be opened.
+  
+2. Next, do:
+  
   ``make u96v2_sbc step=plnx``
+  
+3.
   
   ``make u96v2_sbc step=sysroot``
   
+4.
+  
   ``make u96v2_sbc step=pfm``
+  
+
