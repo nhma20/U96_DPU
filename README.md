@@ -20,7 +20,7 @@ Requires:
   
   This creates new directory ``hdl/projects/u96v2_sbc_base_2021_1`` with Vivado project which can be opened.
   
-2. Next, do:
+2. Next, with petalinux installed, do:
   
   ``make u96v2_sbc step=plnx``
   
