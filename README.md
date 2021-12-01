@@ -16,7 +16,7 @@ Requires:
   
 2. In ``vitis/`` directory do:
 
-  ``make u96v2_sbc step=xsa`` (may have to change ``hdl/scripts/make.tcl`` line 97 ``return $env(NUMBER_OF_PROCESSORS)`` to a lower number, e.g. 10)
+  ``make u96v2_sbc step=xsa`` (may have to add new line 95 in ``hdl/scripts/make.tcl`` ``return 10`` to avoid using too many ressources and crashing machine)
   
   ``make u96v2_sbc step=plnx``
   
