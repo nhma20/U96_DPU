@@ -14,7 +14,7 @@ Requires:
 
     ``git clone -b 2021.1 https://github.com/Avnet/vitis``
 
-      In ``/vitis/projectMakefile.mk`` add "-j 10" after each ``$(MAKE)`` to avoid crashing.
+      In ``/vitis/projectMakefile.mk`` add "-j 10" after each ``$(MAKE)`` to avoid crashing. Also, in line 144 ``source ./add_petalinux_packages.sh`` replace ``source`` with ``bash``.
   
 1. In ``vitis/`` directory do:
 
@@ -22,17 +22,17 @@ Requires:
 
     This creates new directory ``hdl/projects/u96v2_sbc_base_2021_1`` with Vivado project which can be opened.
   
-2. Next, with petalinux installed, do:
+2. Next, with petalinux installed as ~/petalinux/, do:
   
-    ``source ../../petalinux/settings.sh
+    ``source ../../petalinux/settings.sh``
   
-    make u96v2_sbc step=plnx``
+    ``make u96v2_sbc step=plnx``
   
-3.
+3. Next do:
   
     ``make u96v2_sbc step=sysroot``
   
-4.
+4. 
   
     ``make u96v2_sbc step=pfm``
   
