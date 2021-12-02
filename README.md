@@ -24,7 +24,9 @@ Requires:
   
 2. Next, with petalinux installed, do:
   
-    ``make u96v2_sbc step=plnx``
+    ``source ../../petalinux/settings.sh
+  
+    make u96v2_sbc step=plnx``
   
 3.
   
