@@ -3,6 +3,9 @@ Implementing Deep Learning Processing Unit (DPU) on the Ultra96V2 board
 
 Requires:
 - Vitis/Vivado 2021.1 Tools
+- Petalinux 2021.1
+
+Build process from: https://www.hackster.io/AlbertaBeef/vitis-ai-1-4-flow-for-avnet-vitis-platforms-5ebc3f
 
 0. Clone all needed repos:
 
@@ -14,7 +17,7 @@ Requires:
 
     ``git clone -b 2021.1 https://github.com/Avnet/vitis``
 
-      In ``/vitis/projectMakefile.mk`` add "-j 10" after each ``$(MAKE)`` to avoid crashing. Also, in line 144 ``source ./add_petalinux_packages.sh`` replace ``source`` with ``bash``.
+      In ``/vitis/projectMakefile.mk`` add "-j 10" after each ``$(MAKE)`` to avoid crashing. Also, in line 144 ``source ./add_petalinux_packages.sh`` replace ``source`` with ``bash``. This file determines what happens in each "step" (xsa, plnx, dpu etc.)
   
 1. In ``vitis/`` directory do:
 
@@ -32,8 +35,10 @@ Requires:
   
     ``make u96v2_sbc step=sysroot``
   
-4. 
+4. Next do:
   
     ``make u96v2_sbc step=pfm``
   
+5. Next step can take a long time. Do:
 
+    ``make u96v2_sbc step=dpu``
