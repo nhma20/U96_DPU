@@ -42,3 +42,9 @@ Build process from: https://www.hackster.io/AlbertaBeef/vitis-ai-1-4-flow-for-av
 5. Next step can take a long time. Do:
 
     ``make u96v2_sbc step=dpu``
+    
+    
+  ![U96_DPU_bd](https://user-images.githubusercontent.com/76950970/144861958-008cc288-02f6-42e5-bd8f-6c4c4167f6ed.png)
+
+- 1x B2304, low RAM, low DSP, 2x gated clk
+- clk_dsp = 2x clk_dpu
