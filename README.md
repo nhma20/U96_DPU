@@ -17,7 +17,7 @@ Build process from: https://www.hackster.io/AlbertaBeef/vitis-ai-1-4-flow-for-av
 
     ``git clone -b 2021.1 https://github.com/Avnet/vitis``
 
-      In ``/vitis/projectMakefile.mk`` add "-j 10" after each ``$(MAKE)`` to avoid crashing. Also, in line 144 ``source ./add_petalinux_packages.sh`` replace ``source`` with ``bash``. This file determines what happens in each "step" (xsa, plnx, dpu etc.)
+      In ``/vitis/projectMakefile.mk`` add "-j 10" after each ``$(MAKE)`` to avoid crashing. Also, in line 144 ``source ./add_petalinux_packages.sh`` replace ``source`` with ``.`` or ``bash``. This file determines what happens in each "step" (xsa, plnx, dpu etc.)
   
 1. In ``vitis/`` directory do:
 
